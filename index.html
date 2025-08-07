@@ -540,9 +540,9 @@
 
     <!--編集箇所（見た目部分）-->
     <div class="container">
-        <h1>KOKUA<br>アンケートフォーム</h1>
+        <h1>THE PARK<br>アンケートフォーム</h1>
         <div class="info-text">以下全て入力後【アンケート送信】ボタンを押してください。</div>
-        <div class="label"><span class="required">必須</span>お名前を教えてください。</div>
+        <div class="label"><span class="required">必須</span>お名前フルネームを教えてください。</div>
         <textarea id="message" rows="1" placeholder="入力してください"></textarea> <!-- メッセージ入力フィールド -->
 
         <div class="label"><span class="required">必須</span>ご性別を教えてください。</div>
@@ -552,117 +552,8 @@
             <button type="button" class="one" onclick="selectone(this)">答えたくない</button>
         </div>
 
-        <!--必須を追加する場合　<span class="required">必須</span>-->
-        <div class="label"><span class="required">必須</span>電話番号を教えてください。</div>
+        <div class="label">どこでTHE PARK.を知りましたか？</div>
         <textarea id="message2" rows="1" placeholder="入力してください"></textarea> <!-- メッセージ入力フィールド -->
-
-        <div class="label"><span class="required">必須</span>来店動機を教えてください。</div>
-        <div class="two-buttons">
-            <button type="button" class="two" onclick="selecttwo(this)">HPを見て</button>
-            <button type="button" class="two" onclick="selecttwo(this)">ホットペッパーを見て</button>
-            <button type="button" class="two" onclick="selecttwo(this)">紹介</button>
-            <button type="button" class="two" onclick="selecttwo(this)">インスタグラムを見て</button>
-            <button type="button" class="two" onclick="selecttwo(this)">WEB検索</button>
-            <button type="button" class="two" onclick="selecttwo(this)">その他</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>アレルギーを教えてください</div>
-        <div class="three-buttons">
-            <button type="button" class="three" onclick="selectthree(this)">食品</button>
-            <button type="button" class="three" onclick="selectthree(this)">植物</button>
-            <button type="button" class="three" onclick="selectthree(this)">金属</button>
-            <button type="button" class="three" onclick="selectthree(this)">薬</button>
-            <button type="button" class="three" onclick="selectthree(this)">日光</button>
-            <button type="button" class="three" onclick="selectthree(this)">化粧品</button>
-            <button type="button" class="three" onclick="selectthree(this)">その他</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>パッチテスト（当日の施術は不可）<br>のご希望はありますか？</div>
-        <div class="four-buttons">
-            <button type="button" class="four" onclick="selectfour(this)">希望します</button>
-            <button type="button" class="four" onclick="selectfour(this)">希望しません</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>どちらをご利用予定ですか？</div>
-        <div class="five-buttons">
-            <button type="button" class="five" onclick="selectfive(this)">アイブロウ</button>
-            <button type="button" class="five" onclick="selectfive(this)">まつげパーマ</button>
-            <button type="button" class="five" onclick="selectfive(this)">まつげエクステ</button>
-            <button type="button" class="five" onclick="selectfive(this)">パリジェンヌラッシュリフト</button>
-            <button type="button" class="five" onclick="selectfive(this)">ハリウッドアイブロウ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>眉毛の自己処理方法を教えてください</div>
-        <div class="six-buttons">
-            <button type="button" class="six" onclick="selectsix(this)">毛抜き</button>
-            <button type="button" class="six" onclick="selectsix(this)">シェービング</button>
-            <button type="button" class="six" onclick="selectsix(this)">脱色</button>
-            <button type="button" class="six" onclick="selectsix(this)">カット</button>
-            <button type="button" class="six" onclick="selectsix(this)">その他</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>普段の眉メイクに使っているアイテムは何ですか？</div>
-        <div class="seven-buttons">
-            <button type="button" class="seven" onclick="selectseven(this)">パウダー</button>
-            <button type="button" class="seven" onclick="selectseven(this)">ペンシル</button>
-            <button type="button" class="seven" onclick="selectseven(this)">リキッド</button>
-            <button type="button" class="seven" onclick="selectseven(this)">眉マスカラ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>現在皮膚科に通っていますか？</div>
-        <div class="eight-buttons">
-            <button type="button" class="eight" onclick="selecteight(this)">はい</button>
-            <button type="button" class="eight" onclick="selecteight(this)">いいえ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>肌状態、体調は良好ですか？</div>
-        <div class="nine-buttons">
-            <button type="button" class="nine" onclick="selectnine(this)">はい</button>
-            <button type="button" class="nine" onclick="selectnine(this)">いいえ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>肌タイプを教えてください</div>
-        <div class="ten-buttons">
-            <button type="button" class="ten" onclick="selectten(this)">ノーマル</button>
-            <button type="button" class="ten" onclick="selectten(this)">オイリー</button>
-            <button type="button" class="ten" onclick="selectten(this)">ドライ</button>
-            <button type="button" class="ten" onclick="selectten(this)">混合</button>
-            <button type="button" class="ten" onclick="selectten(this)">敏感</button>
-            <button type="button" class="ten" onclick="selectten(this)">赤くなりやすい</button>
-            <button type="button" class="ten" onclick="selectten(this)">ケロイド体質</button>
-            <button type="button" class="ten" onclick="selectten(this)">アトピー</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>現在肌トラブルはありますか？</div>
-        <div class="eleven-buttons">
-            <button type="button" class="eleven" onclick="selecteleven(this)">はい</button>
-            <button type="button" class="eleven" onclick="selecteleven(this)">いいえ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>ワックス脱毛を体験されたことはありますか？</div>
-        <div class="twelve-buttons">
-            <button type="button" class="twelve" onclick="selecttwelve(this)">はい</button>
-            <button type="button" class="twelve" onclick="selecttwelve(this)">いいえ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>目に関する手術を受けたことはありますか？<br>（美容整形を含む）</div>
-        <div class="thirteen-buttons">
-            <button type="button" class="thirteen" onclick="selectthirteen(this)">はい</button>
-            <button type="button" class="thirteen" onclick="selectthirteen(this)">いいえ</button>
-        </div>
-
-        <div class="label"><span class="required">必須</span>眉毛のお悩みはありますか？</div>
-        <div class="fourteen-buttons">
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">太い</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">細い</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">少ない</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">多い</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">かけている</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">左右バランス</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">書き方が分からない</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">似合う形が分からない</button>
-            <button type="button" class="fourteen" onclick="selectfourteen(this)">その他</button>
-        </div>
 
         <button class="submit-button" onclick="submitForm()" div id="section-message">送信</button>
     </div>
@@ -671,19 +562,6 @@
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> <!-- LIFF SDKの読み込み -->
     <script>
         let oneCount = '';
-        let twoCount = '';
-        let threeCount = '';
-        let fourCount = '';
-        let fiveCount = '';
-        let sixCount = '';
-        let sevenCount = '';
-        let eightCount = '';
-        let nineCount = '';
-        let tenCount = '';
-        let elevenCount = '';
-        let twelveCount = '';
-        let thirteenCount = '';
-        let fourteenCount = '';
 
         // LIFF初期化
         document.addEventListener('DOMContentLoaded', function () {
@@ -721,186 +599,18 @@
             oneCount = element.innerText;
         }
 
-        function selecttwo(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.two-buttons button.active');
-            const selectedtwos = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            twoCount = selectedtwos;  // 配列として保持
-        }
-
-        function selectthree(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.three-buttons button.active');
-            const selectedthrees = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            threeCount = selectedthrees;  // 配列として保持
-        }
-
-        function selectfour(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.four-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            fourCount = element.innerText;
-        }
-
-        function selectfive(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.five-buttons button.active');
-            const selectedfives = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            fiveCount = selectedfives;  // 配列として保持
-        }
-
-        function selectsix(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.six-buttons button.active');
-            const selectedsixs = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            sixCount = selectedsixs;  // 配列として保持
-        }
-
-        function selectseven(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.seven-buttons button.active');
-            const selectedsevens = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            sevenCount = selectedsevens;  // 配列として保持
-        }
-
-        function selecteight(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.eight-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            eightCount = element.innerText;
-        }
-
-        function selectnine(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.nine-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            nineCount = element.innerText;
-        }
-
-        function selectten(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.ten-buttons button.active');
-            const selectedtens = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            tenCount = selectedtens;  // 配列として保持
-        }
-
-        function selecteleven(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.eleven-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            elevenCount = element.innerText;
-        }
-
-        function selecttwelve(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.twelve-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            twelveCount = element.innerText;
-        }
-
-        function selectthirteen(element) {
-            // 単一選択項目の処理コード
-            const buttons = document.querySelectorAll('.thirteen-buttons button');
-            buttons.forEach(button => button.classList.remove('active'));
-
-            // 選択されたボタンだけにactiveクラスを追加
-            element.classList.add('active');
-            thirteenCount = element.innerText;
-        }
-
-        function selectfourteen(element) {
-            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
-            element.classList.toggle('active');
-
-            // 選択されているすべてのボタンのテキストを取得して配列にする
-            const activeButtons = document.querySelectorAll('.fourteen-buttons button.active');
-            const selectedfourteens = Array.from(activeButtons).map(button => button.innerText);
-
-            // 必要に応じて選択された内容を格納
-            fourteenCount = selectedfourteens;  // 配列として保持
-        }
 
         //見た目変更した際に不要な物は消す！
         function submitForm() {
             const message = document.getElementById('message').value;
             const message2 = document.getElementById('message2').value;
             oneCount: oneCount;
-            twoCount: twoCount;
-            threeCount: threeCount;
-            fourCount: fourCount;
-            fiveCount: fiveCount;
-            sixCount: sixCount;
-            sevenCount: sevenCount;
-            eightCount: eightCount;
-            nineCount: nineCount;
-            temCount: tenCount;
-            elevenCount: elevenCount;
-            twelveCount: twelveCount;
-            thirteenCount: thirteenCount;
-            fourteenCount: fourteenCount;
+
 
             const formData = {
                 message,
                 message2,
                 oneCount,
-                twoCount,
-                threeCount,
-                fourCount,
-                fiveCount,
-                sixCount,
-                sevenCount,
-                eightCount,
-                nineCount,
-                tenCount,
-                elevenCount,
-                twelveCount,
-                thirteenCount,
-                fourteenCount,
             };
 
             // フォームデータのチェック
@@ -915,95 +625,10 @@
                 return;
             }
 
-            // フォームデータのチェック
-            if (!formData.message2) {
-                alert('電話番号を入力してください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.twoCount) {
-                alert('来店動機をご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.threeCount) {
-                alert('アレルギーをご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.fourCount) {
-                alert('パッチテストのご希望をご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.fiveCount) {
-                alert('ご利用予定をご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.sixCount) {
-                alert('眉毛の自己処理方法をご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.sevenCount) {
-                alert('普段の眉メイクに使っているアイテムをご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.eightCount) {
-                alert('現在皮膚科に通っていますか？ご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.nineCount) {
-                alert('肌状態、体調は良好ですか？ご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.tenCount) {
-                alert('肌タイプをご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.elevenCount) {
-                alert('現在肌トラブルはありますか？ご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.twelveCount) {
-                alert('ワックス脱毛を体験されたことはありますか？ご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.thirteenCount) {
-                alert('目に関する手術を受けたことはありますか？ご選択ください。');
-                return;
-            }
-
-            // フォームデータのチェック
-            if (!formData.fourteenCount) {
-                alert('眉毛のお悩みをご選択ください。');
-                return;
-            }
-
-
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【ご性別】\n・${formData.oneCount}\n\n【電話番号】\n・${formData.message2}\n\n【来店動機】\n・${formData.twoCount}\n\n【アレルギー】\n・${formData.threeCount}\n\n【パッチテストのご希望】\n・${formData.fourCount}\n\n【ご利用予定】\n・${formData.fiveCount}\n\n【眉毛の自己処理方法】\n・${formData.sixCount}\n\n【普段の眉メイクに使っているアイテム】\n・${formData.sevenCount}\n\n【現在皮膚科に通っていますか？】\n・${formData.eightCount}\n\n【肌状態、体調は良好ですか？】\n・${formData.nineCount}\n\n【肌タイプ】\n・${formData.temCount}\n\n【現在肌トラブルはありますか？】\n・${formData.elevenCount}\n\n【ワックス脱毛を体験されたことはありますか？】\n・${formData.twelveCount}\n\n【目に関する手術を受けたことはありますか？】\n・${formData.thirteenCount}\n\n【眉毛のお悩みはありますか？】\n・${formData.fourteenCount}`
+                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【ご性別】\n・${formData.oneCount}\n\n【どこでTHE PARK.を知りましたか？】\n・${formData.message2}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('ご記入ありがとうございます。');
