@@ -546,15 +546,62 @@
         <div class="label"><span class="required">必須</span>お名前フルネームを教えてください。</div>
         <textarea id="message" rows="1" placeholder="入力してください"></textarea> <!-- メッセージ入力フィールド -->
 
-        <div class="label"><span class="required">必須</span>ご性別を教えてください。</div>
+        <div class="label"><span class="required">必須</span>誕生月を教えてください。</div>
         <div class="one-buttons">
-            <button type="button" class="one" onclick="selectone(this)"> 男性</button>
-            <button type="button" class="one" onclick="selectone(this)">女性</button>
-            <button type="button" class="one" onclick="selectone(this)">答えたくない</button>
+            <button type="button" class="one" onclick="selectone(this)">1月</button>
+            <button type="button" class="one" onclick="selectone(this)">2月</button>
+            <button type="button" class="one" onclick="selectone(this)">3月</button>
+            <button type="button" class="one" onclick="selectone(this)">4月</button>
+            <button type="button" class="one" onclick="selectone(this)">5月</button>
+            <button type="button" class="one" onclick="selectone(this)">6月</button>
+            <button type="button" class="one" onclick="selectone(this)">7月</button>
+            <button type="button" class="one" onclick="selectone(this)">8月</button>
+            <button type="button" class="one" onclick="selectone(this)">9月</button>
+            <button type="button" class="one" onclick="selectone(this)">10月</button>
+            <button type="button" class="one" onclick="selectone(this)">11月</button>
+            <button type="button" class="one" onclick="selectone(this)">12月</button>
         </div>
 
-        <div class="label">どこでTHE PARK.を知りましたか？</div>
-        <textarea id="message2" rows="1" placeholder="入力してください"></textarea> <!-- メッセージ入力フィールド -->
+        <div class="label"><span class="required">必須</span>ご性別を教えてください。</div>
+        <div class="two-buttons">
+            <button type="button" class="two" onclick="selecttwo(this)"> 男性</button>
+            <button type="button" class="two" onclick="selecttwo(this)">女性</button>
+            <button type="button" class="two" onclick="selecttwo(this)">答えたくない</button>
+        </div>
+
+        <div class="label"><span class="required">必須</span>現在のお悩みを教えてください。</div>
+        <div class="three-buttons">
+            <button type="button" class="three" onclick="selectthree(this)">筋肉がつかない</button>
+            <button type="button" class="three" onclick="selectthree(this)">体重が落ちない</button>
+            <button type="button" class="three" onclick="selectthree(this)">体力がつかない</button>
+            <button type="button" class="three" onclick="selectthree(this)">見た目が変わらない</button>
+            <button type="button" class="three" onclick="selectthree(this)">その他</button>
+        </div>
+
+        <div class="label">その他を選んだ方でお悩みがあればお答えください</div>
+        <textarea id="message2" rows="1" placeholder="例文：マシンの使い方がわからない"></textarea> <!-- メッセージ入力フィールド -->
+
+        <div class="label">今後置いてほしいマシーンがあればお答えください</div>
+        <textarea id="message3" rows="1" placeholder="入力してください"></textarea> <!-- メッセージ入力フィールド -->
+
+        <div class="label"><span class="required">必須</span>２階のフリースペースはご利用されていますか？</div>
+        <div class="four-buttons">
+            <button type="button" class="four" onclick="selectfour(this)">はい</button>
+            <button type="button" class="four" onclick="selectfour(this)">いいえ</button>
+        </div>
+
+        <div class="label"><span class="required">必須</span>興味があるものを教えてください</div>
+        <div class="five-buttons">
+            <button type="button" class="five" onclick="selectfive(this)">脱毛</button>
+            <button type="button" class="five" onclick="selectfive(this)">肌質改善</button>
+            <button type="button" class="five" onclick="selectfive(this)">整体</button>
+            <button type="button" class="five" onclick="selectfive(this)">まつ毛パーマ</button>
+            <button type="button" class="five" onclick="selectfive(this)">眉毛スタイリング</button>
+            <button type="button" class="five" onclick="selectfive(this)">髪質改善</button>
+            <button type="button" class="five" onclick="selectfive(this)">縮毛矯正</button>
+            <button type="button" class="five" onclick="selectfive(this)">エステ</button>
+            <button type="button" class="five" onclick="selectfive(this)">興味なし</button>
+        </div>
 
         <button class="submit-button" onclick="submitForm()" div id="section-message">送信</button>
     </div>
@@ -563,6 +610,10 @@
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> <!-- LIFF SDKの読み込み -->
     <script>
         let oneCount = '';
+        let twoCount = '';
+        let threeCount = '';
+        let fourCount = '';
+        let fiveCount = '';
 
         // LIFF初期化
         document.addEventListener('DOMContentLoaded', function () {
@@ -600,6 +651,48 @@
             oneCount = element.innerText;
         }
 
+        function selecttwo(element) {
+            // 単一選択項目の処理コード
+            const buttons = document.querySelectorAll('.two-buttons button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // 選択されたボタンだけにactiveクラスを追加
+            element.classList.add('active');
+            twoCount = element.innerText;
+        }
+
+        function selectthree(element) {
+            // 単一選択項目の処理コード
+            const buttons = document.querySelectorAll('.three-buttons button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // 選択されたボタンだけにactiveクラスを追加
+            element.classList.add('active');
+            threeCount = element.innerText;
+        }
+
+        function selectfour(element) {
+            // 単一選択項目の処理コード
+            const buttons = document.querySelectorAll('.four-buttons button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // 選択されたボタンだけにactiveクラスを追加
+            element.classList.add('active');
+            fourCount = element.innerText;
+        }
+
+        function selectfive(element) {
+            // すでに active クラスが付いていれば外し、付いていなければ追加する（トグル）
+            element.classList.toggle('active');
+
+            // 選択されているすべてのボタンのテキストを取得して配列にする
+            const activeButtons = document.querySelectorAll('.five-buttons button.active');
+            const selectedfives = Array.from(activeButtons).map(button => button.innerText);
+
+            // 必要に応じて選択された内容を格納
+            fiveCount = selectedfives;  // 配列として保持
+        }
+
 
         //見た目変更した際に不要な物は消す！
         function submitForm() {
@@ -611,25 +704,48 @@
             const formData = {
                 message,
                 message2,
+                message3,
                 oneCount,
+                twoCount,
+                threeCount,
+                fourCount,
+                fiveCount,
             };
 
             // フォームデータのチェック
-            if (!formData.message) {
-                alert('お名前を入力してください。');
+            if (!formData.oneCount) {
+                alert('誕生月をご選択ください。');
                 return;
             }
 
             // フォームデータのチェック
-            if (!formData.oneCount) {
+            if (!formData.twoCount) {
                 alert('ご性別をご選択ください。');
+                return;
+            }
+
+            // フォームデータのチェック
+            if (!formData.threeCount) {
+                alert('お悩みをご選択ください。');
+                return;
+            }
+
+            // フォームデータのチェック
+            if (!formData.fourCount) {
+                alert('２階のフリースペースのご利用をご選択ください。');
+                return;
+            }
+
+            // フォームデータのチェック
+            if (!formData.fiveCount) {
+                alert('興味があるものをご選択ください。');
                 return;
             }
 
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【ご性別】\n・${formData.oneCount}\n\n【どこでTHE PARK.を知りましたか？】\n・${formData.message2}`
+                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【誕生月】\n・${formData.oneCount}\n\n【ご性別】\n・${formData.twoCount}\n\n【お悩み】\n・${formData.threeCount}\n\n【その他お悩み】\n・${formData.message2}\n\n【今後置いてほしいマシーン】\n・${formData.message3}\n\n【２階のフリースペースのご利用】\n・${formData.fourCount}\n\n【興味があるもの】\n・${formData.fiveCount}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('ご記入ありがとうございます。');
