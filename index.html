@@ -698,8 +698,7 @@
         function submitForm() {
             const message = document.getElementById('message').value;
             const message2 = document.getElementById('message2').value;
-            oneCount: oneCount;
-
+            const message3 = document.getElementById('message3').value; // この行が抜けていました
 
             const formData = {
                 message,
@@ -711,6 +710,12 @@
                 fourCount,
                 fiveCount,
             };
+
+            // フォームデータのチェック
+            if (!formData.message) {
+                alert('お名前をご入力ください。');
+                return;
+            }
 
             // フォームデータのチェック
             if (!formData.oneCount) {
@@ -737,7 +742,7 @@
             }
 
             // フォームデータのチェック
-            if (!formData.fiveCount) {
+            if (!formData.fiveCount || formData.fiveCount.length === 0) {
                 alert('興味があるものをご選択ください。');
                 return;
             }
@@ -745,7 +750,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【誕生月】\n・${formData.oneCount}\n\n【ご性別】\n・${formData.twoCount}\n\n【お悩み】\n・${formData.threeCount}\n\n【その他お悩み】\n・${formData.message2}\n\n【今後置いてほしいマシーン】\n・${formData.message3}\n\n【２階のフリースペースのご利用】\n・${formData.fourCount}\n\n【興味があるもの】\n・${formData.fiveCount}`
+                text: `≪アンケート≫\n【お名前】\n・${formData.message}\n\n【誕生月】\n・${formData.oneCount}\n\n【ご性別】\n・${formData.twoCount}\n\n【お悩み】\n・${formData.threeCount}\n\n【その他お悩み】\n・${formData.message2 || '記載なし'}\n\n【今後置いてほしいマシーン】\n・${formData.message3 || '記載なし'}\n\n【２階のフリースペースのご利用】\n・${formData.fourCount}\n\n【興味があるもの】\n・${Array.isArray(formData.fiveCount) ? formData.fiveCount.join(', ') : formData.fiveCount}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('ご記入ありがとうございます。');
